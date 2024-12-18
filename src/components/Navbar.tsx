@@ -1,6 +1,6 @@
 function Navbar(): JSX.Element {
   return (
-    <div className="bg-primary h-[94px] font-roboto font-medium flex items-center justify-around">
+    <div className="bg-primary h-[94px] font-roboto font-medium flex items-center justify-around fixed top-0 left-0 w-full z-50">
       <div className="flex items-center justify-between gap-16">
         <img src="/logo.png" className="w-[259px] h-[49px]" />
         <ul className="text-xl text-[#474747] flex items-center justify-around gap-10 ">
