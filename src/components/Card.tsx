@@ -1,3 +1,7 @@
+import { motion } from "framer-motion";
+import { CiChat1 } from "react-icons/ci";
+import { HiOutlineLink } from "react-icons/hi";
+import { LuGraduationCap } from "react-icons/lu";
 interface CardProps {
   image: string;
   name: string;
@@ -6,9 +10,6 @@ interface CardProps {
   languages: string;
   fees: number;
 }
-import { CiChat1 } from "react-icons/ci";
-import { HiOutlineLink } from "react-icons/hi";
-import { LuGraduationCap } from "react-icons/lu";
 function Card({
   image,
   name,
@@ -18,7 +19,12 @@ function Card({
   fees,
 }: CardProps): React.JSX.Element {
   return (
-    <div className="bg-primary h-[600px] w-[372px] rounded-2xl flex flex-col items-center justify-center gap-4 shadow-lg">
+    <motion.div
+      className="bg-primary h-[600px] w-[372px] rounded-2xl flex flex-col items-center justify-center gap-4 shadow-lg"
+      initial={{ x: "-100vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ type: "spring", stiffness: 50, damping: 20 }}
+    >
       <img
         src={image}
         alt="Doctor Image"
@@ -57,7 +63,7 @@ function Card({
           Book a Consultation
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

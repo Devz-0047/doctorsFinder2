@@ -1,6 +1,12 @@
+import { motion } from "framer-motion";
 function Filter(): React.JSX.Element {
   return (
-    <div className="bg-white h-[72px]  border-b flex items-center justify-center">
+    <motion.div
+      className="bg-white h-[72px]  border-b flex items-center justify-center"
+      initial={{ y: "-100vw", opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ type: "spring", stiffness: 50, damping: 20 }}
+    >
       <form className="flex items-center justify-center gap-10 font-roboto text-[#585858]">
         <select className="bg-[#F3F3F3]  pl-4 py-2 rounded-md">
           <option value="" disabled selected>
@@ -48,7 +54,7 @@ function Filter(): React.JSX.Element {
           </option>
         </select>
       </form>
-    </div>
+    </motion.div>
   );
 }
 

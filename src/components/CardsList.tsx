@@ -1,4 +1,5 @@
 import Card from "./Card";
+
 function CardLists() {
   return (
     <div className="flex flex-wrap items-center justify-center mt-16 mb-20 gap-14">
